@@ -1,76 +1,189 @@
 <!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlashNewsID - Berita Terkini tentang Artis, Atlet, Politik, dan Publik Figur Lainnya">
+    <title>FlashNewsID - Berita Artis, Atlet, Politik, & Publik Figur</title>
+    <style>
+        /* Resetting margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
-  </head>
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
 
-  <body>
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">FlashNewsID</h3>
-      </div>
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-      <div class="jumbotron">
-        <h1 class="display-3">Berita Terbaru, Terkini, dan Terpercaya</h1>
-        <p class="lead">Dapatkan informasi terlengkap dan terpercaya melalui berita terkini dari berbagai penjuru dunia. Kami menyajikan update berita terbaru yang mengedepankan akurasi dan kecepatan, sehingga Anda selalu terhubung dengan perkembangan yang paling penting. Dengan tim jurnalis profesional, kami berkomitmen memberikan informasi yang tidak hanya relevan, tetapi juga bisa diandalkan untuk kebutuhan Anda sehari-hari. Ikuti kami untuk berita yang selalu fresh, tepat waktu, dan terpercaya!</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Baca Berita!</a></p>
-      </div>
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>VIRAL</h4>
-          <p>Berita viral hari ini menghadirkan kabar terkini dari dunia hiburan dan olahraga yang sedang menjadi perbincangan hangat. Dari artis ternama hingga atlet berprestasi, kami mengulas semua informasi yang paling mencuri perhatian publik. Simak kisah menarik, kontroversi, dan pencapaian terbaru mereka yang selalu menjadi sorotan media. Apakah ada momen mengejutkan dari bintang favorit Anda? Atau apakah ada prestasi luar biasa yang patut dibanggakan? Jangan lewatkan berita viral yang membuat semua orang membicarakannya, hanya di sini</p>
+        /* Hero Section */
+        .hero {
+            background-color: #007bff;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
 
-          
-          
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-          
-          
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .news-item h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .news-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .news-item a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FlashNewsID</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Berita Artis</a></li>
+                    <li><a href="#">Berita Atlet</a></li>
+                    <li><a href="#">Berita Politik</a></li>
+                    <li><a href="#">Berita Publik Figur</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="col-lg-6">
-          <h4>OLAHRAGA</h4>
-          <p>Dapatkan informasi terkini seputar dunia olahraga dengan berita sports yang selalu up-to-date. Mulai dari pertandingan seru, hasil pertandingan terbaru, hingga pencapaian luar biasa atlet top dunia, kami hadirkan semuanya di sini. Ikuti setiap momen penting dari berbagai cabang olahraga, baik itu sepak bola, basket, tenis, hingga olahraga lainnya yang sedang naik daun. Tak hanya itu, kami juga menyajikan analisis mendalam tentang strategi, pemain, dan cerita di balik setiap kemenangan atau kekalahan. Tetap terhubung dengan dunia olahraga dan jadi yang pertama mengetahui perkembangan terbaru!</p>
-
-          
-          
-
-          
-          
+    <section class="hero">
+        <div class="container">
+            <h2>Berita Terkini, Terpercaya, dan Viral</h2>
+            <p>Ikuti kabar terbaru tentang artis, atlet, politik, dan publik figur lainnya hanya di FlashNewsID.</p>
         </div>
-      </div>
+    </section>
 
-      <footer class="footer">
-        <p>© 2025 - FlashNewsID</p>
-      </footer>
+    <section class="content">
+        <div class="container">
+            <h2>Berita Populer</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita 1">
+                    <h3>Berita Artis Terkini</h3>
+                    <p>Deskripsi singkat tentang berita artis yang sedang viral.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita 2">
+                    <h3>Prestasi Atlet Terbaru</h3>
+                    <p>Berita tentang atlet yang baru saja memenangkan kompetisi penting.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita 3">
+                    <h3>Politik Terkini</h3>
+                    <p>Berita terbaru seputar dunia politik dan pengaruhnya terhadap masyarakat.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </div>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita 4">
+                    <h3>Kehidupan Publik Figur</h3>
+                    <p>Kabar terbaru tentang kehidupan pribadi publik figur yang sedang hangat diperbincangkan.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div> <!-- /container -->
-  
-
-<div id="ext_installed_id_images"></div></body>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FlashNewsID. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
 </html>
